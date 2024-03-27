@@ -1,0 +1,64 @@
+body {
+margin: 0;
+padding: 0;
+background: linear-gradient(45deg, #2b2d42, #8d99ae, #edf2f4, skyblue, deepskyblue);
+background-size: 300% 500%;
+animation: color 12s ease-in-out infinite;
+}
+    
+.modal-content {
+    border-color: #2b2d42; 
+}
+.modal-header {
+    background-color: #8d99ae; 
+    color: white; 
+    border-bottom: 1px solid #2b2d42; 
+}
+.modal-body{
+    background-color: #edf2f4;
+}
+.modal-footer {
+    background-color: #8d99ae; 
+    border-top: 1px solid #2b2d42; 
+}
+
+@keyframes color{
+0%{
+background-position: 0 50%;
+}
+50%{
+background-position: 100% 50%;
+}
+100%{
+background-position: 0 50%;
+}
+}
+
+@media (max-width: 376px) {
+body {
+min-width: 376px;
+}
+.h1{
+font-size: 26px !important;
+}
+
+.login-box-msg{
+font-size: 12px !important;
+}
+
+.remember{
+font-size: 10px !important;
+}
+
+.text-white{
+font-size: 12px !important;
+}
+
+#bt{
+font-size: 12px !important;
+}
+
+#forgot{
+font-size: 12px !important;
+}
+}
