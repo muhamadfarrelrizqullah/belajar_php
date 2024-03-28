@@ -16,7 +16,6 @@
 <body class="hold-transition login-page">
 <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
-            <!-- Konten modal -->
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login Gagal</h4>
@@ -35,7 +34,7 @@
     <div class="login-box">
         <div class="card card-outline card-secondary" id="card">
             <div class="card-header text-center">
-                <a href="index.html" class="h1"><b>Padang</b> "Oke"</a>
+                <a href="index.php" class="h1"><b>Padang</b> "Oke"</a>
             </div>
 
             <div class="card-body">
@@ -97,7 +96,7 @@
     <script src="AdminLTE-3.1.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="AdminLTE-3.1.0/dist/js/adminlte.min.js"></script>
 
-    <script src="js/modal-login.js"> </script>
+    <script src="js/modal-login.js?v=<?php echo time(); ?>"> </script>
 </body>
 
 </html>

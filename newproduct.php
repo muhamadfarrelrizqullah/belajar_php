@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>List Product with AdminLTE 3</title>
 
-    <link rel="stylesheet" href="css/ListProduct.css">
+    <link rel="stylesheet" href="css/ListProduct.css?v=<?php echo time(); ?>">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="AdminLTE-3.1.0/plugins/fontawesome-free/css/all.min.css">
@@ -128,7 +128,7 @@
         </nav>
 
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <a href="dashboard.html" class="brand-link">
+            <a href="dashboard.php" class="brand-link">
                 <img src="AdminLTE-3.1.0/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Padang <b>"OKE"</b></span>
@@ -152,7 +152,7 @@
                         data-accordion="false">
 
                         <li class="nav-item">
-                            <a href="dashboard.html" class="nav-link">
+                            <a href="dashboard.php" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -161,7 +161,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="newproduct.html" class="nav-link active">
+                            <a href="newproduct.php" class="nav-link active">
                                 <i class="nav-icon far fa-image"></i>
                                 <p>
                                     List Produk
@@ -197,164 +197,106 @@
             <section class="content">
                 <div class="container-fluid">
                     <div class="row">
+                        <?php
+                        $daftar_makanan = array(
+                            array(
+                                "nama" => "Ayam Pop",
+                                "gambar" => "img/Makanan/pop.png",
+                                "deskripsi" => "Ayam yang dimasak dengan bumbu rempah khas Padang hingga kering dan renyah di bagian luarnya.",
+                                "harga" => "8.000"
+                            ),
+                            array(
+                                "nama" => "Dendeng Balado",
+                                "gambar" => "img/Makanan/download 1.png",
+                                "deskripsi" => "Potongan daging sapi tipis yang digoreng kering dan disajikan dengan sambal balado.",
+                                "harga" => "10.000"
+                            ),
+                            array(
+                                "nama" => "Sambal Balado",
+                                "gambar" => "img/Makanan/download 2.png",
+                                "deskripsi" => "Sambal yang terbuat dari cabai merah dan bawang merah yang diulek dan dimasak dengan minyak.",
+                                "harga" => "5.000"
+                            ),
+                            array(
+                                "nama" => "Gulai Ayam",
+                                "gambar" => "img/Makanan/download 3.png",
+                                "deskripsi" => "Masakan ayam yang dimasak dengan bumbu rempah khas Padang dan santan.",
+                                "harga" => "12.000"
+                            ),
+                            array(
+                                "nama" => "Sate Padang",
+                                "gambar" => "img/Makanan/download 4.png",
+                                "deskripsi" => "Terbuat dari daging sapi yang dipotong kecil-kecil dan disajikan dengan kuah khas Padang.",
+                                "harga" => "15.000"
+                            ),
+                            array(
+                                "nama" => "Rendang",
+                                "gambar" => "img/Makanan/download 5.png",
+                                "deskripsi" => "Masakan daging sapi yang dimasak dengan rempah-rempah dan santan yang kental.",
+                                "harga" => "16.000"
+                            ),
+                            array(
+                                "nama" => "Bebek Goreng",
+                                "gambar" => "img/Makanan/download 6.png",
+                                "deskripsi" => "Bebek yang digoreng kering dengan bumbu rempah hingga renyah di bagian luarnya.",
+                                "harga" => "20.000"
+                            ),
+                            array(
+                                "nama" => "Ikan Asam Padeh",
+                                "gambar" => "img/Makanan/download 7.png",
+                                "deskripsi" => "Ikan yang dimasak dengan bumbu asam yang segar dan rempah-rempah khas Padang.",
+                                "harga" => "17.000"
+                            ),
+                            array(
+                                "nama" => "Pepes Ikan",
+                                "gambar" => "img/Makanan/download 8.png",
+                                "deskripsi" => "Potongan ikan yang dibumbui dengan rempah-rempah khas Padang, dibungkus dengan daun pisang, lalu dikukus.",
+                                "harga" => "16.000"
+                            ),
+                            array(
+                                "nama" => "Dendeng Batokok",
+                                "gambar" => "img/Makanan/download 9.png",
+                                "deskripsi" => "Dendeng batokok adalah irisan tipis daging sapi yang diasinkan kemudian digoreng kering.",
+                                "harga" => "15.000"
+                            ),
+                            array(
+                                "nama" => "Rendang Daging Paru",
+                                "gambar" => "img/Makanan/download 10.png",
+                                "deskripsi" => "Rendang daging paru adalah varian rendang yang menggunakan paru sapi sebagai bahan utamanya.",
+                                "harga" => "14.000"
+                            ),
+                            array(
+                                "nama" => "Rendang Lidah Sapi",
+                                "gambar" => "img/Makanan/download 1.png",
+                                "deskripsi" => "Rendang lidah sapi adalah hidangan rendang yang menggunakan lidah sapi sebagai bahan utamanya.",
+                                "harga" => "15.000"
+                            )
+                        );
+
+                        foreach ($daftar_makanan as $makanan) {
+                        ?>
                         <div class="col-lg-2 col-md-4 col-sm-6" id="card">
                             <div class="card product-card">
-                                <img src="img/Makanan/pop.png" class="card-img-top product-image"
+                                <img src="<?php echo $makanan['gambar']; ?>" class="card-img-top product-image"
                                     alt="Product Image">
                                 <div class="card-body">
-                                    <h5 class="card-title mb-2">Ayam Pop</h5>
-                                    <p class="card-text text-sm">Ayam yang dimasak dengan bumbu rempah khas Padang
-                                        hingga kering dan renyah di bagian luarnya.</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="card-title mb-2 text-sm font-weight-bold"><?php echo $makanan['nama']; ?></p>
+                                        </div>
+                                        <div class="col-auto">
+                                            <p class="card-price text-sm text-right text-muted"><?php echo $makanan['harga']; ?></p>
+                                        </div>
+                                    </div>
+                                    <p class="card-text text-sm"><?php echo $makanan['deskripsi']; ?></p>
                                     <button type="button" class="btn btn-primary" id="btn-detail"
                                         data-toggle="modal" data-target="#myModal">Detail</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6" id="card">
-                            <div class="card product-card">
-                                <img src="img/Makanan/download 1.png" class="card-img-top product-image"
-                                    alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-2">Dendeng Balado</h5>
-                                    <p class="card-text text-sm">Potongan daging sapi tipis yang digoreng kering dan
-                                        disajikan dengan sambal balado.</p>
-                                    <button type="button" class="btn btn-primary" id="btn-detail"
-                                        data-toggle="modal" data-target="#myModal">Detail</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6" id="card">
-                            <div class="card product-card">
-                                <img src="img/Makanan/download 2.png" class="card-img-top product-image"
-                                    alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-2">Sambal Balado</h5>
-                                    <p class="card-text text-sm">Sambal yang terbuat dari cabai merah dan bawang merah
-                                        yang diulek dan dimasak dengan minyak.</p>
-                                    <button type="button" class="btn btn-primary" id="btn-detail"
-                                        data-toggle="modal" data-target="#myModal">Detail</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6" id="card">
-                            <div class="card product-card">
-                                <img src="img/Makanan/download 3.png" class="card-img-top product-image"
-                                    alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-2">Gulai Ayam</h5>
-                                    <p class="card-text text-sm">Masakan ayam yang dimasak dengan bumbu rempah khas
-                                        Padang dan santan.</p>
-                                    <button type="button" class="btn btn-primary" id="btn-detail"
-                                        data-toggle="modal" data-target="#myModal">Detail</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6" id="card">
-                            <div class="card product-card">
-                                <img src="img/Makanan/download 4.png" class="card-img-top product-image"
-                                    alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-2">Sate Padang</h5>
-                                    <p class="card-text text-sm">Terbuat dari daging sapi yang dipotong kecil-kecil dan
-                                        disajikan dengan kuah khas Padang.</p>
-                                    <button type="button" class="btn btn-primary" id="btn-detail"
-                                        data-toggle="modal" data-target="#myModal">Detail</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6" id="card">
-                            <div class="card product-card">
-                                <img src="img/Makanan/download 5.png" class="card-img-top product-image"
-                                    alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-2">Rendang</h5>
-                                    <p class="card-text text-sm">Masakan daging sapi yang dimasak dengan rempah-rempah
-                                        dan santan yang kental.</p>
-                                    <button type="button" class="btn btn-primary" id="btn-detail"
-                                        data-toggle="modal" data-target="#myModal">Detail</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-2 col-md-4 col-sm-6" id="card">
-                            <div class="card product-card">
-                                <img src="img/Makanan/download 6.png" class="card-img-top product-image"
-                                    alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-2">Bebek Goreng</h5>
-                                    <p class="card-text text-sm">Bebek yang digoreng kering dengan bumbu rempah hingga
-                                        renyah di bagian luarnya.</p>
-                                    <button type="button" class="btn btn-primary" id="btn-detail"
-                                        data-toggle="modal" data-target="#myModal">Detail</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6" id="card">
-                            <div class="card product-card">
-                                <img src="img/Makanan/download 7.png" class="card-img-top product-image"
-                                    alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-2">Ikan Asam Padeh</h5>
-                                    <p class="card-text text-sm">Ikan yang dimasak dengan bumbu asam yang segar dan
-                                        rempah-rempah khas Padang.</p>
-                                    <button type="button" class="btn btn-primary" id="btn-detail"
-                                        data-toggle="modal" data-target="#myModal">Detail</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6" id="card">
-                            <div class="card product-card">
-                                <img src="img/Makanan/download 8.png" class="card-img-top product-image"
-                                    alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-2">Pepes Ikan</h5>
-                                    <p class="card-text text-sm">Potongan ikan yang dibumbui dengan rempah-rempah khas
-                                        Padang, dibungkus dengan daun pisang, lalu dikukus.</p>
-                                    <button type="button" class="btn btn-primary" id="btn-detail"
-                                        data-toggle="modal" data-target="#myModal">Detail</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6" id="card">
-                            <div class="card product-card">
-                                <img src="img/Makanan/download 9.png" class="card-img-top product-image"
-                                    alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-2">Dendeng Batokok</h5>
-                                    <p class="card-text text-sm">Dendeng batokok adalah irisan tipis daging sapi yang
-                                        diasinkan kemudian digoreng kering.</p>
-                                    <button type="button" class="btn btn-primary" id="btn-detail"
-                                        data-toggle="modal" data-target="#myModal">Detail</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6" id="card">
-                            <div class="card product-card">
-                                <img src="img/Makanan/download 10.png" class="card-img-top product-image"
-                                    alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-2">Rendang Daging Paru</h5>
-                                    <p class="card-text text-sm">Rendang daging paru adalah varian rendang yang
-                                        menggunakan paru sapi sebagai bahan utamanya.</p>
-                                    <button type="button" class="btn btn-primary" id="btn-detail"
-                                        data-toggle="modal" data-target="#myModal">Detail</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6" id="card">
-                            <div class="card product-card">
-                                <img src="img/Makanan/download 1.png" class="card-img-top product-image"
-                                    alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-2">Rendang Lidah Sapi</h5>
-                                    <p class="card-text text-sm">Rendang lidah sapi adalah hidangan rendang yang
-                                        menggunakan lidah sapi sebagai bahan utamanya.</p>
-                                    <button type="button" class="btn btn-primary" id="btn-detail"
-                                        data-toggle="modal" data-target="#myModal">Detail</button>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </section>
@@ -375,6 +317,7 @@
                                 <img id="modal-image" class="img-fluid" alt="Product Image">
                             </div>
                             <h5 class="modal-title mt-3" id="modal-title"></h5>
+                            <p class="modal-price text-muted" id="modal-price"></p>
                             <p id="modal-description"></p>
                         </div>
                     </div>
@@ -403,7 +346,7 @@
     <script>
         $.widget.bridge('uibutton', $.ui.button)
     </script>
-    <script src="js/modalproduct.js"></script>
+    <script src="js/modalproduct.js?v=<?php echo time(); ?>"></script>
     <script src="AdminLTE-3.1.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="AdminLTE-3.1.0/plugins/chart.js/Chart.min.js"></script>
     <script src="AdminLTE-3.1.0/plugins/sparklines/sparkline.js"></script>
