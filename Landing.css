@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+body {
+margin: 0;
+padding: 0;
+background-color: white;
+font-family: 'Poppins', sans-serif;
+}
+
+body::-webkit-scrollbar {
+display: none;
+}
+
+.jumbotron {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-size: cover;
+background-position: center;
+background-image: url('img/Land.png');
+margin-top: -50px !important;
+}
+
+#navbar {
+background-color: #2b2d42 !important;
+border-bottom-left-radius: 40px;
+border-bottom-right-radius: 40px;
+padding: 25px 100px;
+}
+
+#card {
+background-image: url('img/bg1.png');
+}
+
+#bt-menu {
+background-color: #8d99ae !important;
+}
+
+#bt-kontak {
+background-color: #3a465a !important;
+}
+
+#bt-kirim {
+background-color: #3a465a !important;
+}
+
+#kontak-form {
+padding: 50px 0;
+}
+
+#footer {
+padding-top: 50px;
+padding-bottom: 20px;
+background-color: #2b2d42 !important;
+}
+
+.footer-top {
+padding-bottom: 20px;
+}
+
+#icon {
+color: white !important;
+}
