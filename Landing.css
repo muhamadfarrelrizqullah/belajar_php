@@ -29,6 +29,11 @@ border-bottom-right-radius: 40px;
 padding: 25px 100px;
 }
 
+#toggler{
+border: 1px solid #8d99ae;
+background-color: #8d99ae;
+}
+
 #card {
 background-image: url('img/bg1.png');
 }
@@ -61,4 +66,23 @@ padding-bottom: 20px;
 
 #icon {
 color: white !important;
+}
+
+@media (max-width: 768px) {
+#card {
+background-image: none;
+background-color: #3a465a;
+}
+}
+
+
+@media (max-width: 706px) {
+#navbar {
+padding: 20px 30px;
+}
+
+.jumbotron .container {
+margin-left: 10px;
+width: 300px;
+}
 }

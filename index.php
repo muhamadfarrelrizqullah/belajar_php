@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padang Oke</title>
-    
+    <title>Semantic HTML - Padang Oke</title>
+
     <link rel="stylesheet" href="Landing.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -15,9 +15,13 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-secondary" id="navbar">
-            <div class="collapse navbar-collapse"">
-                <a class="navbar-brand text-light display-4" href="index.php"><b>Padang</b> "Oke"</a>
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <a class="navbar-brand text-light display-4" href="index.php"><b>Padang</b> "Oke"</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link text-light" href="login-layout.php">Login</a>
                     </li>
@@ -36,6 +40,7 @@
         </nav>
     </header>
 
+
     <main role="main">
 
         <section class="jumbotron">
@@ -52,7 +57,7 @@
         <div class="album py-5" id="card">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-xs-4">
                         <div class="card mb-4 shadow-sm">
                             <img src="img/Makanan/pop.png" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -69,12 +74,13 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-xs-4">
                         <div class="card mb-4 shadow-sm">
                             <img src="img/Makanan/download 1.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Dendeng Balado</h5>
-                                <p class="card-text">Potongan daging sapi tipis yang digoreng kering dan disajikan
+                                <p class="card-text">Potongan daging sapi tipis dan lembut yang digoreng kering dan
+                                    disajikan
                                     dengan sambal balado.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
@@ -86,7 +92,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-xs-4">
                         <div class="card mb-4 shadow-sm">
                             <img src="img/Makanan/download 4.png" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -134,18 +140,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5 class="footer-top">Alamat Kami</h5>
+                    <h5 class="footer-top"><u>Alamat Kami</u></h5>
                     <p>Jalan Ahmad Yani No. 123</p>
                     <p>Surabaya</p>
                     <p>12345, Jawa Timur</p>
                 </div>
                 <div class="col-md-4">
-                    <h5 class="footer-top">Hubungi Kami</h5>
+                    <h5 class="footer-top"><u>Hubungi Kami</u></h5>
                     <p>Email: padangoke@mail.com</p>
                     <p>Telepon: 123-456-7890</p>
                 </div>
                 <div class="col-md-4">
-                    <h5 class="footer-top">Ikuti Kami</h5>
+                    <h5 class="footer-top"><u>Ikuti Kami</u></h5>
                     <ul class="list-inline">
                         <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"
                                     id="icon"></i></a></li>
